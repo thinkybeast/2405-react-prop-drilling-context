@@ -80,19 +80,32 @@ const Main = (props) => {
   );
 };
 
+const Banner = ({ theme }) => {
+  return <div style={colorThemes[theme]}>Welcome to Cool Site 🐨</div>;
+};
+
+const Header = ({ theme }) => {
+  return (
+    <header>
+      <Banner theme={theme} />
+    </header>
+  );
+};
+
+const Footer = ({ theme }) => (
+  <footer style={colorThemes[theme]}>Keeping it cool since {thisYear}</footer>
+);
+
 function App() {
   const [theme, setTheme] = React.useState("default");
 
   const handleColorChange = (colorTheme) => setTheme(colorTheme);
 
   return (
-    <div
-      id="container"
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
-      <header>Welcome to Cool Site 🐨</header>
+    <div id="container" style={{ display: "flex", flexDirection: "column" }}>
+      <Header theme={theme} />
       <Main theme={theme} onChangeTheme={handleColorChange} />
-      <footer>Keeping it cool since {thisYear}</footer>
+      <Footer theme={theme} />
     </div>
   );
 }
