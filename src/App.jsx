@@ -19,7 +19,8 @@ const colorThemes = {
 const CoolContent = () => {
   console.log("Rendering CoolContent");
 
-  const { theme, handleColorChange } = React.useContext(AppContext);
+  const { theme, handleColorChange, voteUSAFootball, voteEuroFootball } =
+    React.useContext(AppContext);
 
   return (
     <div>
@@ -37,8 +38,8 @@ const CoolContent = () => {
         <option value={"Green"}>Green</option>
       </select>
       <div style={{ fontSize: "3rem", display: "flex", gap: "36px" }}>
-        <button>🏈</button>
-        <button>⚽️</button>
+        <button onClick={voteUSAFootball}>🏈</button>
+        <button onClick={voteEuroFootball}>⚽️</button>
       </div>
     </div>
   );
@@ -108,6 +109,9 @@ const Banner = () => {
 
 const Votes = () => {
   console.log("Rendering Votes");
+
+  const { americanFootballVotes, europeanFootballVotes } =
+    React.useContext(AppContext);
   return (
     <div>
       <h3>Current score: </h3>
@@ -119,7 +123,8 @@ const Votes = () => {
           justifyContent: "center",
         }}
       >
-        <span>🏈: 0</span> <span>⚽️: 0</span>
+        <span>🏈: {americanFootballVotes}</span>{" "}
+        <span>⚽️: {europeanFootballVotes}</span>
       </div>
     </div>
   );
