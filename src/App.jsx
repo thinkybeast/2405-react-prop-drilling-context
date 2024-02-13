@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { ThemeContext } from "./providers/ThemeProvider";
+import { AppContext } from "./providers/AppProvider";
 
 const thisYear = new Date().getFullYear();
 
@@ -19,7 +19,7 @@ const colorThemes = {
 const CoolContent = () => {
   console.log("Rendering CoolContent");
 
-  const { theme, handleColorChange } = React.useContext(ThemeContext);
+  const { theme, handleColorChange } = React.useContext(AppContext);
 
   return (
     <div>
@@ -102,7 +102,7 @@ const Main = (props) => {
 const Banner = () => {
   console.log("Rendering Banner");
 
-  const { theme } = React.useContext(ThemeContext);
+  const { theme } = React.useContext(AppContext);
   return <div style={colorThemes[theme]}>Welcome to Cool Site 🐨</div>;
 };
 
@@ -139,7 +139,7 @@ const Header = () => {
 const Footer = () => {
   console.log("Rendering Footer");
 
-  const { theme } = React.useContext(ThemeContext);
+  const { theme } = React.useContext(AppContext);
   return (
     <footer style={colorThemes[theme]}>Keeping it cool since {thisYear}</footer>
   );
