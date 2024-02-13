@@ -36,6 +36,10 @@ const CoolContent = () => {
         <option value={"red"}>Red</option>
         <option value={"Green"}>Green</option>
       </select>
+      <div style={{ fontSize: "3rem", display: "flex", gap: "36px" }}>
+        <button>🏈</button>
+        <button>⚽️</button>
+      </div>
     </div>
   );
 };
@@ -102,12 +106,32 @@ const Banner = () => {
   return <div style={colorThemes[theme]}>Welcome to Cool Site 🐨</div>;
 };
 
+const Votes = () => {
+  console.log("Rendering Votes");
+  return (
+    <div>
+      <h3>Current score: </h3>
+      <div
+        style={{
+          fontSize: "1rem",
+          display: "flex",
+          gap: "36px",
+          justifyContent: "center",
+        }}
+      >
+        <span>🏈: 0</span> <span>⚽️: 0</span>
+      </div>
+    </div>
+  );
+};
+
 const Header = () => {
   console.log("Rendering Header");
 
   return (
     <header>
       <Banner />
+      <Votes />
     </header>
   );
 };
