@@ -15,10 +15,10 @@ const colorThemes = {
   },
 };
 
-const Main = ({ theme, onChangeTheme, ...props }) => {
+const CoolContent = ({ theme, onChangeTheme }) => {
   return (
-    <main {...props}>
-      <h1>Home of the Cool</h1>
+    <div>
+      <h3>Cool Content</h3>
       <button onClick={() => alert("Wao 🦥")} style={colorThemes[theme]}>
         Official Rizz Button
       </button>
@@ -31,6 +31,51 @@ const Main = ({ theme, onChangeTheme, ...props }) => {
         <option value={"red"}>Red</option>
         <option value={"Green"}>Green</option>
       </select>
+    </div>
+  );
+};
+
+const CoolComponentD = (props) => {
+  return (
+    <div>
+      Cool Component D
+      <CoolContent {...props} />
+    </div>
+  );
+};
+
+const CoolComponentC = (props) => {
+  return (
+    <div>
+      Cool Component C
+      <CoolComponentD {...props} />
+    </div>
+  );
+};
+
+const CoolComponentB = (props) => {
+  return (
+    <div>
+      Cool Component B
+      <CoolComponentC {...props} />
+    </div>
+  );
+};
+
+const CoolComponentA = (props) => {
+  return (
+    <div>
+      Cool Component A
+      <CoolComponentB {...props} />
+    </div>
+  );
+};
+
+const Main = (props) => {
+  return (
+    <main>
+      <h1>Home of the Cool</h1>
+      <CoolComponentA {...props} />
     </main>
   );
 };
