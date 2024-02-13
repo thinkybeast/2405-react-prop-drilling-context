@@ -50,12 +50,17 @@ const stateReducer = (prevState, action) => {
 };
 
 export const AppProvider = ({ children }) => {
-  const [theme, setTheme] = React.useReducer(stateReducer, initialState);
+  const [state, dispatch] = React.useReducer(stateReducer, initialState);
+  const handleColorChange = (colorTheme) =>
+    dispatch({ type: "CHANGE_THEME", payload: colorTheme });
 
-  const handleColorChange = (colorTheme) => setTheme(colorTheme);
+  const voteUSAFootball = () => dispatch({ type: "VOTE_USA_FOOTBALL" });
+  const voteEuroFootball = () => dispatch({ type: "VOTE_EURO_FOOTBALL" });
 
   return (
-    <AppContext.Provider value={{ theme, handleColorChange }}>
+    <AppContext.Provider
+      value={{ ...state, handleColorChange, voteEuroFootball, voteUSAFootball }}
+    >
       {children}
     </AppContext.Provider>
   );
