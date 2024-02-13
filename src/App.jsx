@@ -17,6 +17,8 @@ const colorThemes = {
 };
 
 const CoolContent = () => {
+  console.log("Rendering CoolContent");
+
   const { theme, handleColorChange } = React.useContext(ThemeContext);
 
   return (
@@ -39,6 +41,8 @@ const CoolContent = () => {
 };
 
 const CoolComponentD = (props) => {
+  console.log("Rendering CoolComponentD");
+
   return (
     <div>
       Cool Component D
@@ -48,6 +52,8 @@ const CoolComponentD = (props) => {
 };
 
 const CoolComponentC = (props) => {
+  console.log("Rendering CoolComponentC");
+
   return (
     <div>
       Cool Component C
@@ -57,6 +63,8 @@ const CoolComponentC = (props) => {
 };
 
 const CoolComponentB = (props) => {
+  console.log("Rendering CoolComponentB");
+
   return (
     <div>
       Cool Component B
@@ -66,6 +74,8 @@ const CoolComponentB = (props) => {
 };
 
 const CoolComponentA = (props) => {
+  console.log("Rendering CoolComponentA");
+
   return (
     <div>
       Cool Component A
@@ -75,6 +85,8 @@ const CoolComponentA = (props) => {
 };
 
 const Main = (props) => {
+  console.log("Rendering Main");
+
   return (
     <main>
       <h1>Home of the Cool</h1>
@@ -84,11 +96,15 @@ const Main = (props) => {
 };
 
 const Banner = () => {
+  console.log("Rendering Banner");
+
   const { theme } = React.useContext(ThemeContext);
   return <div style={colorThemes[theme]}>Welcome to Cool Site 🐨</div>;
 };
 
 const Header = () => {
+  console.log("Rendering Header");
+
   return (
     <header>
       <Banner />
@@ -97,6 +113,8 @@ const Header = () => {
 };
 
 const Footer = () => {
+  console.log("Rendering Footer");
+
   const { theme } = React.useContext(ThemeContext);
   return (
     <footer style={colorThemes[theme]}>Keeping it cool since {thisYear}</footer>
@@ -104,6 +122,7 @@ const Footer = () => {
 };
 
 function App() {
+  console.log("Rendering App");
   return (
     <div id="container" style={{ display: "flex", flexDirection: "column" }}>
       <Header />
