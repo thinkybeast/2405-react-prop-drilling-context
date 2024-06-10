@@ -50,12 +50,13 @@ const stateReducer = (prevState, action) => {
 };
 
 export const AppProvider = ({ children }) => {
-  const [theme, setTheme] = React.useReducer(stateReducer, initialState);
+  const [state, dispatch] = React.useReducer(stateReducer, initialState);
 
-  const handleColorChange = (colorTheme) => setTheme(colorTheme);
+  const handleColorChange = (colorTheme) =>
+    dispatch({ type: "CHANGE_THEME", payload: colorTheme });
 
   return (
-    <AppContext.Provider value={{ theme, handleColorChange }}>
+    <AppContext.Provider value={{ ...state, handleColorChange }}>
       {children}
     </AppContext.Provider>
   );
