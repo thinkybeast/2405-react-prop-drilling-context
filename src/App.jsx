@@ -35,7 +35,7 @@ function App() {
         >
           <option value={"default"}>Default</option>
           <option value={"red"}>Red</option>
-          <option value={"Green"}>Green</option>
+          <option value={"green"}>Green</option>
         </select>
       </main>
       <footer>Keeping it cool since {thisYear}</footer>
