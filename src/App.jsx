@@ -29,7 +29,7 @@ const CoolContent = ({ theme, onChangeTheme }) => {
       >
         <option value={"default"}>Default</option>
         <option value={"red"}>Red</option>
-        <option value={"Green"}>Green</option>
+        <option value={"green"}>Green</option>
       </select>
     </div>
   );
