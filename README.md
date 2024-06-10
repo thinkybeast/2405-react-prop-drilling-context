@@ -1,6 +1,6 @@
-# React workshop: Reducers and custom hooks
+# React workshop: Prop drilling, React Context, and State Management with Context + Reducers
 
-This application demonstrates the use cases and common patterns for reducers and custom hooks for state and effect management in React.
+This application demonstrates the use cases and common patterns for React Context and reducers for state management in React.
 
 ## Installation
 
@@ -9,9 +9,9 @@ This application demonstrates the use cases and common patterns for reducers and
 
 ## Usage
 
-This app is most effective as a learning tool. By switching to the various commit checkpoints, you will see common problems caused by data fetching and local state management. The final commit also illustrates some basic best practices around component design.
+This app is most effective as a learning tool. By switching to the various branches, you will see common challenges of passing and setting state as the number and complexity of components grows.
 
 To navigate between commits:
 
-1. `git log`: View the list of commits
-2. `git checkout <commit_hash> | <tag>`: Navigate to the specific commit you want to view, using its hash, or the tag of the commit.
+1. `git branch`: View the list of branches
+2. `git checkout <branch>`: Navigate to the specific branch you want to view
