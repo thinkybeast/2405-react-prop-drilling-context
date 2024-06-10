@@ -1,8 +1,17 @@
-# React + Vite
+# React workshop: Reducers and custom hooks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application demonstrates the use cases and common patterns for reducers and custom hooks for state and effect management in React.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. `npm install`
+2. `npm run dev`
+
+## Usage
+
+This app is most effective as a learning tool. By switching to the various commit checkpoints, you will see common problems caused by data fetching and local state management. The final commit also illustrates some basic best practices around component design.
+
+To navigate between commits:
+
+1. `git log`: View the list of commits
+2. `git checkout <commit_hash> | <tag>`: Navigate to the specific commit you want to view, using its hash, or the tag of the commit.
